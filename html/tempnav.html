@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .flex-container {
+      display: flex;
+    }
+
+    .item {
+      flex: 1;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .item-long {
+      flex: 1.5;
+    }
+
+    .item-space {
+      margin-left: 150px; /* Adjust the space between the 4th and 5th element */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="item item-long">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item item-space">5</div>
+  </div>
+
+</body>
+</html>

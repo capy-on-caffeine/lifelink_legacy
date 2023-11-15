@@ -1,0 +1,162 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 20px;
+}
+
+.left-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45%;
+    background-color: hsl(228, 7%, 87%);
+    height: 100%;
+}
+
+.right-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55%;
+    background-color: hsl(0, 100%, 67%);
+    height: 100%;
+}
+
+#round-img {
+    position: absolute;
+    width: 600px;
+    top: -30%;
+    left: -30%;
+    z-index: 0;
+}
+
+#patient-img {
+    position: absolute;
+    width: 400px;
+    top: 30%;
+    left: -15%;
+    z-index: 1;
+}
+
+.tagline {
+    position: absolute;
+    top: 60%;
+    width: 80%;
+    left: 10%;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.container {
+    position: absolute;
+    width: 50%;
+    left: 30%;
+    height: 65%;
+    top: 20%;
+    border-radius: 2px;
+    /* box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.2); */
+    /* background-color: hsl(228, 7%, 95%); */
+}
+
+.selector {
+    width: 100%;
+    height: 13%;
+    position: absolute;
+    /* font-weight: 900; */
+}
+
+.sel {
+    padding: 20px 20px 10px 20px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* .active-form {
+    color: hsl(228, 7%, 87%);
+} */
+
+.active-form::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: ".";
+    color: transparent;
+    background-color: hsl(50, 76%, 53%);
+    height: 2px;
+    width: 75%;
+    transition: all 2s ease;
+}
+
+.reg, .log {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 87%;
+    top: 13%;
+}
+
+.reg {display: block;}
+.log {display: none;}
+
+.hoffman {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    text-align: center;
+}
+
+.regin, .login {
+    padding: 0 30px 30px;
+    height: 87%;
+    word-wrap: anywhere;  
+    line-height: 1.4em;
+}
+
+/* .regin::before, .login::before {
+    position: absolute;
+    content: ".";
+    color: transparent;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    top: 0;
+    margin: auto;
+    background-color: #eee;
+    height: 1px;
+} */
+
+input {
+    position: relative;
+    width: 87%;
+    /* left: 5%; */
+    height: 7%;
+    font-size: 0.9em;
+    box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.08) inset;
+    border-radius: 5px;
+    border: 1px solid #818181;
+    background-color: hsl(228, 7%, 95%);
+    color: black;
+    padding: 5px 0;
+    padding-left: 3%;
+    margin: 20px;
+    display: inline-block;
+}
+
+input[type="submit"] {
+    height: 10%;
+    background-color: hsl(228, 7%, 87%);
+    border: 1px solid black;
+    color: black;
+    width: 91%;
+    /* font-weight: 900; */
+}
+
+input:focus {
+    border: 2px solid #27a2ff;
+}

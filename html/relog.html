@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeLink</title>
+    <link rel="stylesheet" href="relog.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="..\Images\icon.png">
+            <span>Lifelink</span>
+        </div>
+        <div class="link"><a id="homeLink"><span>Home</span></a></div>
+        <div class="link"><a id="aboutLink"><span>About Us</span></a></div>
+        <div class="link"><a id="bloodLink"><span>Find Blood</span></a></div>
+        <div class="link sign-in"><span>Sign In</span></div>
+    </div>
+
+    <div class="left-wrapper">
+        <img src="../Images/round.png" id="round-img">
+        <p class="tagline">
+            Be a hero, donate blood. Your generosity can make a world of difference
+        </p>
+    </div>
+
+    <div class="right-wrapper">
+        <img src="../Images/patient.png" id="patient-img">
+        <div class="container">
+            <div class="selector"><div class="hoffman" style="left: 0;"><span class="sel active-form" id="one" onclick="regact()">Register</span></div>
+            <div class="hoffman" style="right: 0;"><span class="sel" id="two" onclick="logact()">Login</span></div></div>
+            <div class="reg" id="reg">
+            <div class="regin">
+            <form method="post">
+                <input type="text" placeholder="Full Name" autocomplete="off">
+                <input type="email" placeholder="Email Address" autocomplete="off">
+                <input type="password" placeholder="Password" autocomplete="off">
+                <input type="password" placeholder="Confirm Password" autocomplete="off">
+                <input type="submit" value="Join Us">
+            </form>
+            </div>
+            </div>
+            <div class="log" id="log">
+            <div class="login">
+                <form method="post">
+                <input type="email" placeholder="Email Address" autocomplete="off">
+                <input type="password" placeholder="Password" autocomplete="off">
+                <input type="submit" value="Login">
+            </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logact(){
+            document.getElementById('two').className = document.getElementById('two').className.replace("sel", "sel active-form");
+            document.getElementById('one').className = document.getElementById('one').className.replace("sel active-form", "sel");
+            document.getElementById('reg').style.display = "none";
+            document.getElementById('log').style.display = "block";
+        }
+            
+        function regact(){
+            document.getElementById('one').className = document.getElementById('one').className.replace("sel", "sel active-form");
+            document.getElementById('two').className = document.getElementById('two').className.replace("sel active-form", "sel");
+            document.getElementById('reg').style.display = "block";
+            document.getElementById('log').style.display = "none";
+        }
+            
+        
+    </script>
+</body>
+</html>
