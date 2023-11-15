@@ -4,12 +4,13 @@ import {
   getBloodRequests,
   getBloodTypes,
   requestBloodType,
-  hospitalLogin,
+  authHospital,
   hospitalRegister,
   hospitalLogout,
   getHospitalProfile,
   updateHospitalProfile,
 } from "../controllers/hospitalController.js";
+import { protect } from "../middleware/authMiddleware.js";
 
 router.get("/blood", getBloodTypes);
 
@@ -19,12 +20,12 @@ router.get("/blood/requests", getBloodRequests);
 
 router.post("/hospital/register", hospitalRegister);
 
-router.post("/hospital/login", hospitalLogin);
+router.post("/hospital/auth", authHospital);
 
 router.post("/hospital/logout", hospitalLogout);
 
-router.get("/hospital/:id", getHospitalProfile);
+router.get("/hospital/profile", protect, getHospitalProfile);
 
-router.put("/hospital/:id", updateHospitalProfile);
+router.put("/hospital/profile", protect, updateHospitalProfile);
 
 export default router;

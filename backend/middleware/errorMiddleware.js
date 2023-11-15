@@ -4,9 +4,9 @@
 // so we want our errors to just be a json object
 
 const notFound = (req, res, next) => {
-  const error = new Error(`Not found -${req.originalUrl}`);
+  const error = new Error(`Not found - ${req.originalUrl}`);
   res.status(404);
-  next(error);
+  next(error); // Pass the error to the next middleware without sending a response here
 };
 
 const errorHandler = (err, req, res, next) => {
