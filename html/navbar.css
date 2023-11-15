@@ -54,7 +54,8 @@
 }
 
 .link span::after, .active::after {
-    position: absolute;
+    position: relative;
+    display: block;
     bottom: 25%;
     left: 0;
     right: 0;
@@ -68,7 +69,7 @@
 }
 
 .link:hover span::after {
-    width: 50%;
+    width: 100%;
     transition: all 0.2s ease;
 }
 
@@ -77,5 +78,5 @@
 }
 
 .active::after {
-    width: 50%;
+    width: 100%;
 }
