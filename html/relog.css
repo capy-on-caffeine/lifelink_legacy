@@ -10,7 +10,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 45%;
+    width: 50%;
     background-color: hsl(228, 7%, 87%);
     height: 100%;
 }
@@ -19,7 +19,7 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    width: 55%;
+    width: 50%;
     background-color: hsl(0, 100%, 67%);
     height: 100%;
 }
