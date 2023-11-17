@@ -1,74 +1,200 @@
 .main-wrapper {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 20%;
-    background-color: hsl(0, 0%, 100%);
-    height: 80%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: hsl(0, 0%, 100%);
+  height: 100%;
+}
+
+.pad-elem {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  top: 0;
+  left: 0;
 }
 
 .menu {
-    position: absolute;
-    width: 20%;
-    left: 0;
-    top: 0;
-    background-color: hsl(0, 0%, 98%);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+  position: fixed;
+  width: 20%;
+  left: 0;
+  top: 0;
+  background-color: hsl(0, 0%, 98%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
 .btn {
-    padding: 10px;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 35px;
-    cursor: pointer;
-    width: 55%;
-    margin: 20px 20px 0px 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    transition: all 0.2s ease;
+  padding: 10px;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 35px;
+  cursor: pointer;
+  width: 55%;
+  margin: 15px 20px 0px 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
 }
 
 .active-btn {
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 2px 15px 0px hsla(0, 0%, 50%, 0.1);
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 2px 15px 0px hsla(0, 0%, 50%, 0.1);
 }
 
 .btn:nth-child(1) {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .btn:hover {
-    background-color: hsl(0, 0%, 95%);
-    transition: all 0.2s ease;
+  background-color: hsl(0, 0%, 95%);
+  transition: all 0.2s ease;
+}
+
+#dashboard-icon {
+  width: 17px;
+  position: relative;
+  top: 10%;
+  margin-right: 5px;
+}
+
+#findblood-icon {
+  width: 22px;
+  position: relative;
+  top: 20%;
+  margin-right: 5px;
 }
 
 .dashboard {
-    position: absolute;
-    width: 80%;
-    right: 0;
-    top: 0;
-    background-color: hsl(0, 0%, 100%);
-    height: 100%;
-    /* justify-content: center; */
+  position: absolute;
+  width: 80%;
+  right: 0;
+  top: 0;
+  background-color: hsl(0, 0%, 100%);
+  height: 100%;
+}
+
+.dashboard > h1 {
+  position: relative;
+  left: 11%;
+  width: 40%;
+  margin-bottom: 2%;
+  font-size: 1.1rem;
 }
 
 .hospital-card {
-    width: 80%; /* Set the width of the container */
-    height: 39%; /* Set the height of the container */
-    background-image: url('../Images/card-bg.png'); /* Set the path to your image */
-    background-size: cover; /* Ensure the background image covers the entire container */
-    background-position: center; /* Center the background image within the container */
-    position: relative; /* Set the position property to relative */
-    left: 10%;
-    border-radius: 30px;
+  width: 80%;
+  height: 35%;
+  background-image: url("../Images/card-bg.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 10%;
+  border-radius: 30px;
+  margin-bottom: 2%;
 }
 
-.hospital-card > span {
-    display: inline-block;
+.hospital-card span {
+  display: block;
+  margin: 10px;
+}
+
+.hospital-info {
+  position: relative;
+  width: 50%;
+  height: 70%;
+  top: 15%;
+  left: 7%;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.update-btn {
+  /* padding: 10px; */
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  color: #000;
+  /* text-align: center; */
+  text-decoration: none;
+  border-radius: 35px;
+  cursor: pointer;
+  /* width: 55%; */
+  /* margin: 20px 20px 0px 20px; */
+  /* font-size: 0.8rem; */
+  /* font-weight: 700; */
+  transition: all 0.2s ease;
+  background-color: hsl(194, 100%, 50%);
+}
+
+.update-btn:hover {
+  background-color: hsl(194, 100%, 60%);
+  transition: all 0.2s ease;
+}
+
+.card-container {
+  width: 80%;
+  left: 10%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 25%;
+  /* top: 5%; */
+  margin-bottom: 5%;
+}
+
+.card {
+  width: 167px;
+  height: 208px;
+  flex-shrink: 0;
+  border-radius: 27px;
+  background: #2cc805;
+  position: relative;
+  margin: 3.9%;
+}
+
+.card > span {
+  position: absolute;
+  width: 107px;
+  height: 105px;
+  flex-shrink: 0;
+  color: #4eff22;
+  /* font-family: Inter; */
+  font-size: 77px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  left: 10%;
+  bottom: 0;
+}
+
+.card-overlay {
+  position: absolute;
+  width: 167px;
+  height: 208px;
+  flex-shrink: 0;
+  border-radius: 27px;
+  background: rgba(0, 0, 0, 0.43);
+}
+
+.card-overlay > span {
+  position: absolute;
+  color: #fafafa;
+  /* font-family: Inter; */
+  font-size: 105px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  left: 8%;
+  top: -5%;
 }

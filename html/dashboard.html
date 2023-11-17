@@ -6,8 +6,9 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
-<body>
+<body id="bd">
     <div class="navbar">
         <div class="logo">
             <img src="..\Images\icon.png">
@@ -18,19 +19,104 @@
         <div class="link"><a id="bloodLink"><span>Find Blood</span></a></div>
         <div class="link sign-in"><span>Sign In</span></div>
     </div>
-    <!-- MAIN CONTENT STARTS -->
     <div class="main-wrapper">
         <div class="menu">
-            <div class="btn active-btn">Dashboard</div>
-            <div class="btn">Find Blood</div>
+            <div class="pad-elem"></div>
+            <div class="btn active-btn"><img src="../Images/dashboard-icon.png" id="dashboard-icon">Dashboard</div>
+            <div class="btn"><img src="../Images/findblood-icon.png" id="findblood-icon">Find Blood</div>
         </div>
         <div class="dashboard">
+            <div class="pad-elem"></div>
+            
             <h1>Analytics Overview</h1>
             <div class="hospital-card">
-                <span class="name">Sacred Heart Hospital</span>
-                <span class="address">Grand Trunk Rd, near Petrol Pump, Maqsudan</span>
+                <div class="hospital-info">
+                    <span class="name">Sacred Heart Hospital</span>
+                    <span class="address">Grand Trunk Rd, near Petrol Pump, Maqsudan</span>
+                    <div class="update-btn" id="updateBtn">Update</div>
+                </div>
+            </div>
+
+            <h1>Blood Stats</h1>
+            <div class="card-container">
+                <div class="card">
+                    <span>A+</span>
+                    <div class="card-overlay">
+                        <span>46</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>B+</span>
+                    <div class="card-overlay">
+                        <span>83</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>AB+</span>
+                    <div class="card-overlay">
+                        <span>10</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>O+</span>
+                    <div class="card-overlay">
+                        <span>22</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>A-</span>
+                    <div class="card-overlay">
+                        <span>13</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>B-</span>
+                    <div class="card-overlay">
+                        <span>31</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>AB-</span>
+                    <div class="card-overlay">
+                        <span>4</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>O-</span>
+                    <div class="card-overlay">
+                        <span>1</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="modal-wrapper">
+        <div class="container">
+            <div class="selector"><div class="hoffman" style="left: 0;"><span class="sel active" id="one" onclick="regact()">Register</span></div>
+            <div class="hoffman" style="right: 0;"><span class="sel" id="two" onclick="logact()">Login</span></div></div>
+            <div class="reg" id="reg">
+            <div class="regin">
+            <form method="post">
+                <br><input type="text" placeholder="Full Name" autocomplete="off"><br><br><br>
+                <input type="email" placeholder="Email Address" autocomplete="off"><br><br><br>
+                <input type="password" placeholder="Password" autocomplete="off"><br><br><br>
+                <input type="password" placeholder="Confirm Password" autocomplete="off"><br><br><br>
+                <input type="submit" value="Join Us">
+                <input type="submit" value="Cancel" id="cancelBtn">
+            </form>
+            </div>
+            </div>
+            <div class="log" id="log">
+            <div class="login">
+                <form method="post">
+                <br><br><br><input type="email" placeholder="Email Address" autocomplete="off"><br><br><br>
+                <input type="password" placeholder="Password" autocomplete="off"><br><br><br>
+                <button value="Login">
+            </form>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

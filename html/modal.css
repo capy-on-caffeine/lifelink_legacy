@@ -1,70 +1,35 @@
-html {
-    scroll-behavior: smooth;
+#bd {
+    overflow: auto;
 }
 
-body {
-    font-size: 20px;
-}
-
-.left-wrapper {
+.modal-wrapper {
     position: absolute;
+    width: 100%;
+    height: 100%;
     left: 0;
     top: 0;
-    width: 53%;
-    background-color: hsl(228, 7%, 87%);
-    height: 100%;
-}
-
-.right-wrapper {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 47%;
-    background-color: hsl(0, 100%, 67%);
-    height: 100%;
-}
-
-#round-img {
-    position: absolute;
-    width: 600px;
-    top: -30%;
-    left: -30%;
-    z-index: 0;
-}
-
-#patient-img {
-    position: absolute;
-    width: 400px;
-    top: 30%;
-    left: -15%;
-    z-index: 1;
-}
-
-.tagline {
-    position: absolute;
-    top: 60%;
-    width: 80%;
-    left: 10%;
-    font-size: 2rem;
-    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    overflow: hidden;
+    display: none;
 }
 
 .container {
     position: absolute;
-    width: 50%;
-    left: 30%;
-    height: 65%;
+    width: 27%;
+    left: 36.5%;
+    height: 60%;
     top: 20%;
-    border-radius: 2px;
-    /* box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.2); */
-    /* background-color: hsl(228, 7%, 95%); */
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.2);
+    background-color: white;
 }
 
 .selector {
     width: 100%;
     height: 13%;
     position: absolute;
-    /* font-weight: 900; */
+    font-weight: 900;
 }
 
 .sel {
@@ -75,11 +40,11 @@ body {
     font-size: 1.1em;
 }
 
-/* .active-form {
-    color: hsl(228, 7%, 87%);
-} */
+.active {
+    color: dodgerblue;
+}
 
-.active-form::after {
+.active::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -87,7 +52,7 @@ body {
     margin: auto;
     content: ".";
     color: transparent;
-    background-color: hsl(50, 76%, 53%);
+    background-color: dodgerblue;
     height: 2px;
     width: 75%;
     transition: all 2s ease;
@@ -118,7 +83,7 @@ body {
     line-height: 1.4em;
 }
 
-/* .regin::before, .login::before {
+.regin::before, .login::before {
     position: absolute;
     content: ".";
     color: transparent;
@@ -129,32 +94,28 @@ body {
     margin: auto;
     background-color: #eee;
     height: 1px;
-} */
+}
 
 input {
     position: relative;
     width: 87%;
-    /* left: 5%; */
+    left: 5%;
     height: 7%;
-    font-size: 0.9em;
+    font-size: 1em;
     box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.08) inset;
     border-radius: 5px;
-    border: 1px solid #818181;
-    background-color: hsl(228, 7%, 95%);
+    border: 2px solid #d5d5d5;
     color: black;
     padding: 5px 0;
     padding-left: 3%;
-    margin: 20px;
-    display: inline-block;
 }
 
-input[type="submit"] {
+input[type="submit"], button {
     height: 10%;
-    background-color: hsl(228, 7%, 87%);
+    background-color: #27a2ff;
     border: 1px solid black;
-    color: black;
-    width: 91%;
-    /* font-weight: 900; */
+    color: white;
+    font-weight: 900;
 }
 
 input:focus {
