@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Row, Col, Container, Image } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
 import { toast } from "react-toastify";
@@ -15,16 +15,14 @@ const HospitalProfileScreen = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const dispatch = useDispatch();
-
   const { hospitalInfo } = useSelector((state) => state.auth);
-
   const [updateProfile, { isLoading }] = useUpdateMutation();
 
   useEffect(() => {
     setName(hospitalInfo.name);
     setAddress(hospitalInfo.address);
     setEmail(hospitalInfo.email);
-  }, [hospitalInfo.setName, hospitalInfo.setEmail, hospitalInfo.setAddress]);
+  }, [hospitalInfo.name, hospitalInfo.address, hospitalInfo.email]);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -49,66 +47,77 @@ const HospitalProfileScreen = () => {
   };
 
   return (
-    <FormContainer>
-      <h1>Update Profile</h1>
+    <Container fluid>
+      <Row>
+        <Col className="left-wrapper">
+          <Image src="./images/round.png" id="round-img" fluid />
+          <p className="tagline">Update your profile here &rarr;</p>
+        </Col>
 
-      <Form onSubmit={submitHandler}>
-        <Form.Group className="my-2" controlId="name">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="name"
-            placeholder="Enter name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
+        <Col className="right-wrapper">
+          <FormContainer>
+            <h1>Update Profile</h1>
 
-        <Form.Group className="my-2" controlId="name">
-          <Form.Label>Address</Form.Label>
-          <Form.Control
-            type="address"
-            placeholder="Enter hospital address"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
+            <Form onSubmit={submitHandler}>
+              <Form.Group className="my-2" controlId="name">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  type="name"
+                  placeholder="Enter name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                ></Form.Control>
+              </Form.Group>
 
-        <Form.Group className="my-2" controlId="email">
-          <Form.Label>Email Address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
-        <Form.Group className="my-2" controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
+              <Form.Group className="my-2" controlId="address">
+                <Form.Label>Address</Form.Label>
+                <Form.Control
+                  type="address"
+                  placeholder="Enter hospital address"
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                ></Form.Control>
+              </Form.Group>
 
-        <Form.Group className="my-2" controlId="confirmPassword">
-          <Form.Label>Confirm Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Confirm password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
+              <Form.Group className="my-2" controlId="email">
+                <Form.Label>Email Address</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                ></Form.Control>
+              </Form.Group>
+              <Form.Group className="my-2" controlId="password">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Enter password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                ></Form.Control>
+              </Form.Group>
 
-        {isLoading && <Loader />}
+              <Form.Group className="my-2" controlId="confirmPassword">
+                <Form.Label>Confirm Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Confirm password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                ></Form.Control>
+              </Form.Group>
 
-        <Button type="submit" variant="primary" className="mt-3">
-          Update
-        </Button>
-      </Form>
-    </FormContainer>
+              {isLoading && <Loader />}
+
+              <Button type="submit" variant="primary" className="mt-3">
+                Update
+              </Button>
+            </Form>
+          </FormContainer>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
