@@ -1,0 +1,74 @@
+.main-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 20%;
+    background-color: hsl(0, 0%, 100%);
+    height: 80%;
+}
+
+.menu {
+    position: absolute;
+    width: 20%;
+    left: 0;
+    top: 0;
+    background-color: hsl(0, 0%, 98%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 35px;
+    cursor: pointer;
+    width: 55%;
+    margin: 20px 20px 0px 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.active-btn {
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 2px 15px 0px hsla(0, 0%, 50%, 0.1);
+}
+
+.btn:nth-child(1) {
+    margin-top: 40px;
+}
+
+.btn:hover {
+    background-color: hsl(0, 0%, 95%);
+    transition: all 0.2s ease;
+}
+
+.dashboard {
+    position: absolute;
+    width: 80%;
+    right: 0;
+    top: 0;
+    background-color: hsl(0, 0%, 100%);
+    height: 100%;
+    /* justify-content: center; */
+}
+
+.hospital-card {
+    width: 80%; /* Set the width of the container */
+    height: 39%; /* Set the height of the container */
+    background-image: url('../Images/card-bg.png'); /* Set the path to your image */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image within the container */
+    position: relative; /* Set the position property to relative */
+    left: 10%;
+    border-radius: 30px;
+}
+
+.hospital-card > span {
+    display: inline-block;
+}
