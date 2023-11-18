@@ -1,0 +1,213 @@
+.main-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsl(228, 7%, 87%);
+    height: 100%;
+}
+
+.pad-elem {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
+}
+
+.menu {
+    position: fixed;
+    width: 20%;
+    left: 0;
+    top: 0;
+    background-color: hsl(0, 0%, 98%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.link-wrapper {
+    text-decoration: none;
+    /* Remove default link underline */
+    color: inherit;
+    /* Inherit text color from parent */
+
+    /* Add any additional styles you want for the link wrapper */
+}
+
+.dashboard_button {
+    padding: 10px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 35px;
+    cursor: pointer;
+    width: 55%;
+    margin: 15px 20px 0px 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.active-dashboard_button {
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 2px 15px 0px hsla(0, 0%, 50%, 0.1);
+}
+
+.dashboard_button:nth-child(1) {
+    margin-top: 40px;
+}
+
+.dashboard_button:hover {
+    background-color: hsl(0, 0%, 95%);
+    transition: all 0.2s ease;
+}
+
+#dashboard-icon {
+    width: 17px;
+    position: relative;
+    top: 10%;
+    margin-right: 5px;
+}
+
+#findblood-icon {
+    width: 22px;
+    position: relative;
+    top: 20%;
+    margin-right: 5px;
+}
+
+.dashboard {
+    position: absolute;
+    width: 80%;
+    right: 0;
+    top: 0;
+    background-color: hsl(0, 0%, 100%);
+    height: 100%;
+} 
+
+.dashboard>h1 {
+    position: relative;
+    left: 11%;
+    width: 40%;
+    margin-bottom: 2%;
+    font-size: 1.1rem;
+}
+
+.hospital-dashboard_card {
+    width: 80%;
+    height: 35%;
+    background-image: url("/images/card-bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 10%;
+    border-radius: 30px;
+    margin-bottom: 2%;
+}
+
+ .hospital-dashboard_card span {
+    display: block;
+    margin: 10px;
+}
+
+.hospital-info {
+    position: relative;
+    width: 50%;
+    height: 70%;
+    top: 15%;
+    left: 7%;
+} 
+
+ .name {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.address{ 
+    font-size: 1.8rem;
+}
+
+.update-dashboard_button {
+    /* padding: 10px; */
+    position: relative;
+    display: inline-block;
+    margin-top:20px;
+    padding: 16px 60px;
+    color: #000;
+    /* text-align: center; */
+    text-decoration: none;
+    border-radius: 35px;
+    cursor: pointer;
+    /* width: 55%; */
+    /* margin: 20px 20px 0px 20px; */
+    /* font-size: 0.8rem; */
+    /* font-weight: 700; */
+    transition: all 0.2s ease;
+    background-color: hsl(194, 100%, 50%);
+}
+
+.update-dashboard_button:hover {
+    background-color: hsl(194, 100%, 60%);
+    transition: all 0.2s ease;
+}
+
+.dashboard_card-container {
+    width: 80%;
+    left: 10%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    /* top: 5%; */
+    margin-bottom: 5%;
+}
+
+.dashboard_card {
+    width: 167px;
+    height: 208px;
+    flex-shrink: 0;
+    border-radius: 27px;
+    background: #2cc805;
+    position: relative;
+    margin: 3.9%;
+}
+
+.dashboard_card>span {
+    position: absolute;
+    width: 107px;
+    height: 105px;
+    flex-shrink: 0;
+    color: #4eff22;
+    /* font-family: Inter; */
+    font-size: 77px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 10%;
+    bottom: 0;
+}
+
+.dashboard_card-overlay {
+    position: absolute;
+    width: 167px;
+    height: 208px;
+    flex-shrink: 0;
+    border-radius: 27px;
+    background: rgba(0, 0, 0, 0.43);
+}
+
+.dashboard_card-overlay>span {
+    position: absolute;
+    color: #fafafa;
+    /* font-family: Inter; */
+    font-size: 105px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 8%;
+    top: -5%;
+}

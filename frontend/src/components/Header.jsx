@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 import { useLogoutMutation } from "../slices/hospitalsApiSlice";
 import { logout } from "../slices/authSlice";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { hospitalInfo } = useSelector((state) => state.auth);

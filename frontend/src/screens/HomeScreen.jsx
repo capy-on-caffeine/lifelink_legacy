@@ -29,36 +29,131 @@ const HomeScreen = () => {
                   alignItems: "center",
                 }}
               >
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
                   <h1 style={{ fontSize: "3rem", marginBottom: "2rem" }}>
                     Hospital Dashboard:
                   </h1>
-                  <button
-                    style={{
-                      padding: "10px",
-                      fontSize: "16px",
-                      cursor: "pointer",
-                      border: "none",
-                      borderRadius: "5px",
-                      marginBottom: "2rem",
-                    }}
-                  >
-                    Go to Dashboard
-                  </button>
+                  <Link to="/hospital/dashboard">
+                    <button
+                      style={{
+                        padding: "10px",
+                        paddingLeft: "2.5rem",
+                        paddingRight: "2.5rem",
+                        fontSize: "16px",
+                        cursor: "pointer",
+                        borderRadius: "5px",
+                        margin: "1rem",
+                        // Set text color to white
+                        transition: "background-color 0.3s, color 0.3s", // Add a smooth transition effect
+                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Add a subtle box shadow
+                        fontWeight: "bold", // Make the text bold
+                        outline: "none", // Remove the default outline
+                        textDecoration: "none", // Remove underlines for links
+                        display: "inline-block", // Make sure the button respects the text flow
+                        textAlign: "center", // Center-align text
+                        lineHeight: "1.5", // Set line height for better readability
+                        fontFamily: "Arial, sans-serif", // Specify a fallback font family
+                        ":hover": {
+                          backgroundColor: "#217dbb", // Change background color on hover
+                          color: "#fff", // Change text color on hover
+                        },
+                      }}
+                    >
+                      Go to Dashboard
+                    </button>
+                  </Link>
                 </div>
               </div>
             </>
           ) : (
             <>
-              <h1>Wanna get started? Try signup/register</h1>
-              <div>
-                <Link to="/register">
-                  <button>Sign up</button>
-                </Link>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <h1 style={{ fontSize: "2.8rem" }}>
+                    Wanna get started? Try signup/register
+                  </h1>
+                  <div>
+                    <Link to="/register">
+                      <button
+                        style={{
+                          padding: "10px",
+                          paddingLeft: "2.5rem",
+                          paddingRight: "2.5rem",
+                          fontSize: "16px",
+                          cursor: "pointer",
+                          borderRadius: "5px",
+                          margin: "1.8rem",
+                          // Set text color to white
+                          transition: "background-color 0.3s, color 0.3s", // Add a smooth transition effect
+                          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Add a subtle box shadow
+                          fontWeight: "bold", // Make the text bold
+                          outline: "none", // Remove the default outline
+                          textDecoration: "none", // Remove underlines for links
+                          display: "inline-block", // Make sure the button respects the text flow
+                          textAlign: "center", // Center-align text
+                          lineHeight: "1.5", // Set line height for better readability
+                          fontFamily: "Arial, sans-serif", // Specify a fallback font family
+                          ":hover": {
+                            backgroundColor: "#217dbb", // Change background color on hover
+                            color: "#fff", // Change text color on hover
+                          },
+                        }}
+                      >
+                        Sign up
+                      </button>
+                    </Link>
 
-                <Link to="/login">
-                  <button>Sign in</button>
-                </Link>
+                    <Link to="/login">
+                      <button
+                        style={{
+                          padding: "10px",
+                          paddingLeft: "2.5rem",
+                          paddingRight: "2.5rem",
+                          fontSize: "16px",
+                          cursor: "pointer",
+                          borderRadius: "5px",
+                          margin: "1.8rem",
+                          // Set text color to white
+                          transition: "background-color 0.3s, color 0.3s", // Add a smooth transition effect
+                          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Add a subtle box shadow
+                          fontWeight: "bold", // Make the text bold
+                          outline: "none", // Remove the default outline
+                          textDecoration: "none", // Remove underlines for links
+                          display: "inline-block", // Make sure the button respects the text flow
+                          textAlign: "center", // Center-align text
+                          lineHeight: "1.5", // Set line height for better readability
+                          fontFamily: "Arial, sans-serif", // Specify a fallback font family
+                          ":hover": {
+                            backgroundColor: "#217dbb", // Change background color on hover
+                            color: "#fff", // Change text color on hover
+                          },
+                        }}
+                      >
+                        Sign in
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </>
           )}

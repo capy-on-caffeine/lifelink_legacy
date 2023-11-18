@@ -16,6 +16,8 @@ import LoginScreen from "./screens/LoginScreen.jsx";
 import RegisterScreen from "./screens/RegisterScreen.jsx";
 import HospitalProfileScreen from "./screens/HospitalProfileScreen.jsx";
 import PrivateRoutes from "./components/PrivateRoutes.jsx";
+import DashboardScreen from "./screens/DashboardScreen.jsx";
+import FindBloodScreen from "./screens/FindBloodScreen.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +28,8 @@ const router = createBrowserRouter(
       {/*Private Route */}
       <Route path="" element={<PrivateRoutes />}>
         <Route path="/hospital/profile" element={<HospitalProfileScreen />} />
+        <Route path="/hospital/dashboard" element={<DashboardScreen />} />
+        <Route path="/hospital/findblood" element={<FindBloodScreen />} />
       </Route>
     </Route>
   )
